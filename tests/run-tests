@@ -1,0 +1,14 @@
+#! /bin/sh
+
+for file in $(find . -name 'test*.rkt')
+do
+  echo "testing $file"
+  if [ -f $file ]
+  then
+    racket $file || { echo ":(" ; exit 1;}
+  else
+    $file/run-tests || exit 1
+  fi
+done
+
+echo ":)"
