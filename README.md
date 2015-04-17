@@ -1,2 +1,2 @@
 # gradual-racket
-The gradually typed lambda calculus as a racket language. 
+The gradually typed lambda calculus as a racket #lang 
